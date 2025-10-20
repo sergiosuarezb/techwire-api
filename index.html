@@ -1,37 +1,39 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MiC App 🎧</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="manifest" href="manifest.json" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lector de noticias tecnológicas">
+    <meta name="theme-color" content="#667eea">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <title>Tech News Reader</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🎵 MiC App</h1>
     <nav>
-      <button onclick="cargarPagina('home')">Inicio</button>
-      <button onclick="cargarPagina('lista')">Explorar</button>
-      <button onclick="cargarPagina('favoritos')">Favoritos</button>
-      <button onclick="cargarPagina('informativa')">Info</button>
+        <button onclick="Home()">Home</button>
+        <button onclick="Informativa()">Info</button>
+        <button onclick="Leidos()">Leídos</button>
+        <button onclick="Favoritos()">Favoritos</button>
+        <button onclick="Estadisticas()">Estadísticas</button>
     </nav>
-  </header>
 
-  <main id="contenido"></main>
+    <div id="root">
+        <!-- aqui se agrega lo que hagamos en js -->
+    </div>
+    <script src="paginas/conexion.js"></script>
+    <script src="paginas/home.js"></script>
+    <script src="paginas/detalle.js"></script>
+    <script src="paginas/favoritos.js"></script>
+    <script src="paginas/informativa.js"></script>
+    <script src="paginas/leidos.js"></script>
+    <script src="paginas/estadistica.js"></script>
 
-  <footer>
-    <p>© 2025 MiC Stylesheet - Inspiración y Conexión</p>
-  </footer>
 
-  <!-- Scripts -->
-  <script defer src="paginas/conexion.js"></script>
-  <script defer src="paginas/api.js"></script>
-  <script defer src="paginas/app.js"></script>
-  <script defer src="paginas/home.js"></script>
-  <script defer src="paginas/lista.js"></script>
-  <script defer src="paginas/detalle.js"></script>
-  <script defer src="paginas/favoritos.js"></script>
-  <script defer src="paginas/informativa.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", General)
+    </script>
+    
 </body>
 </html>
